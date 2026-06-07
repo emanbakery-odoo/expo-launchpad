@@ -1,0 +1,12 @@
+{
+  "expo": {
+    "name": "Web Kiosk Launcher",
+    "slug": "web-kiosk-launcher",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "assetBundlePatterns": ["**/*"],
+    "ios": { "supportsTablet": true },
+    "android": { "softwareKeyboardLayoutMode": "pan" }
+  }
+}
