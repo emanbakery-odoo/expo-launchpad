@@ -17,7 +17,7 @@ import { createClient, Session, User } from '@supabase/supabase-js';
 // SUPABASE CONFIG — EDIT ONLY THESE 2 LINES
 // ==========================================
 const SUPABASE_URL = 'https://gupthfushhukeytkturk.supabase.co'; // <-- paste your Supabase URL here
-const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imd1cHRoZnVzaGh1a2V5dGt0dXJrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA4Mjg5ODcsImV4cCI6MjA5NjQwNDk4N30.sqFK00zoyaS4c5AkUPttipVcl41TcGANmswYf1r18AA';         // <-- paste your anon/public key here
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imd1cHRoZnVzaGh1a2V5dGt0dXJrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA4Mjg5ODcsImV4cCI6MjA5NjQwNDk4N30.sqFK[...]
 
 const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY, {
   auth: {
@@ -908,7 +908,7 @@ function AppFormScreen() {
           <TextInput value={name} onChangeText={setName} style={[styles.input, { color: p.text, backgroundColor: p.surface, borderColor: p.border }]} placeholderTextColor={p.placeholder} />
 
           <ThemedText style={{ marginBottom: 6, marginTop: 12 }}>Source URL</ThemedText>
-          <TextInput value={url} onChangeText={setUrl} style={[styles.input, { color: p.text, backgroundColor: p.surface, borderColor: p.border }]} placeholder="https://…" placeholderTextColor={p.placeholder} autoCapitalize="none" />
+          <TextInput value={url} onChangeText={setUrl} style={[styles.input, { color: p.text, backgroundColor: p.surface, borderColor: p.border }]} placeholder="https://…" placeholderTextColor={p.placeholder} />
 
           <ThemedText style={{ marginBottom: 6, marginTop: 12 }}>Icon URL (or upload)</ThemedText>
           <View style={{ flexDirection: 'row', gap: 8 }}>
@@ -927,7 +927,7 @@ function AppFormScreen() {
           <ThemedText style={{ marginBottom: 6, marginTop: 12 }}>Open Mode</ThemedText>
           <View style={{ flexDirection: 'row', gap: 8, marginBottom: 12 }}>
             {(['embedded','external','inapp'] as OpenMode[]).map((m) => (
-              <TouchableOpacity key={m} onPress={() => setOpenMode(m)} style={{ flex: 1, paddingVertical: 10, borderRadius: 10, backgroundColor: openMode === m ? p.primary : p.surface, borderWidth: 1, borderColor: p.border, alignItems: 'center' }}>
+              <TouchableOpacity key={m} onPress={() => setOpenMode(m)} style={{ flex: 1, paddingVertical: 10, borderRadius: 10, backgroundColor: openMode === m ? p.primary : p.surface, borderWidth: 1, borderColor: p.border }}>
                 <ThemedText bold style={{ color: openMode === m ? '#fff' : p.text, textTransform: 'capitalize', fontSize: 12 }}>{m}</ThemedText>
               </TouchableOpacity>
             ))}
